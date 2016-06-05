@@ -22,6 +22,7 @@ branches:
 
 1. Create a new repository at <https://github.com/new> with name `repo-name`
 2. Generate a new token at <https://github.com/settings/tokens> with access to `public_repo` and write it down (will be needed later)
+3. If you don't want to use USER@users.noreply.github.com or your primary github.com email address, then add your own email address at <https://github.com/settings/emails> to your account.
 
 ### localhost
 
@@ -30,6 +31,10 @@ branches:
    ```bash
 git clone -o origin https://user:password@git.domain.tld/repo-name /local/path/
 cd /local/path/
+
+git config user.email "USER@users.noreply.github.com" # or another email linked to your account
+git config user.name "Your Name"
+
 git checkout -b master   # create & use 'master' branch
 
 # make local changes
