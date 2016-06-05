@@ -22,7 +22,7 @@ branches:
 
 1. Create a new repository at <https://github.com/new> with name `repo-name`
 2. Generate a new token at <https://github.com/settings/tokens> with access to `public_repo` and write it down (will be needed later)
-3. If you don't want to use USER@users.noreply.github.com or your primary github.com email address, then add your own email address at <https://github.com/settings/emails> to your account.
+3. If you don't want to use USER@users.noreply.github.com or your primary email address for github, then add the address you're comfortable with to your account at <https://github.com/settings/emails>.
 
 ### localhost
 
