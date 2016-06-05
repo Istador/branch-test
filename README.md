@@ -29,9 +29,10 @@ branches:
 1. local repository at `/local/path/` with branch `master` for `git.domain.tld`
 
    ```bash
-git clone -o origin https://user:password@git.domain.tld/repo-name /local/path/
+git clone -o origin https://git.domain.tld/repo-name /local/path/
 cd /local/path/
 
+git config credential.helper store  # save usernames and passwords
 git config user.email "USER@users.noreply.github.com" # or another email linked to your account
 git config user.name "Your Name"
 
@@ -46,9 +47,10 @@ git push                 # master -> git.domain.tld
 2. branch `github` for remote `github` that links to `github.com` showing a branch name of `public`
 
    ```bash
-git remote add github https://username:token@github.com/Username/repo-name.git
+git remote add github https://github.com/Username/repo-name.git
 git checkout -b github   # create & use 'github' branch
 git push --set-upstream github github:public  # github -> github.com
+# you'll be asked for credentials. use your username or email as username, and your token as password.
 git config push.default upstream              # use upstream for the 'git push' command
 git checkout master      # use master
 ```
