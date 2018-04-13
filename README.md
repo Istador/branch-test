@@ -28,7 +28,7 @@ branches:
 
 1. local repository at `/local/path/` with branch `master` for `git.domain.tld`
 
-   ```bash
+```bash
 git clone -o origin https://git.domain.tld/repo-name /local/path/
 cd /local/path/
 
@@ -44,9 +44,10 @@ git add .
 git commit -m 'first commit'
 git push                 # master -> git.domain.tld
 ```
+
 2. branch `github` for remote `github` that links to `github.com` showing a branch name of `public`
 
-   ```bash
+```bash
 git remote add github https://github.com/Username/repo-name.git
 git checkout -b github   # create & use 'github' branch
 git push --set-upstream github github:public  # github -> github.com
@@ -59,7 +60,7 @@ git checkout master      # use master
 
 1. working with the default branch `master`
 
-   ```bash
+```bash
 git pull                 # git.domain.tld -> master
 
 # make local changes
@@ -68,9 +69,10 @@ git add .
 git commit -m 'commit message'
 git push                 # master -> git.domain.tld
 ```
+
 2. bringing changes from `git.domain.tld` to `github.com`
 
-   ```bash
+```bash
 git pull                 # git.domain.tld -> master
 git checkout github      # use github
 git merge master         # master -> github
@@ -80,11 +82,10 @@ git checkout master      # use master
 
 3. bringing changes from `github.com` to `git.comain.tld` (e.g. accepted pull requests from other developers)
 
-   ```bash
+```bash
 git checkout github      # use github
 git pull                 # github.com -> github
 git checkout master      # use master
 git merge github         # github -> master
 git push                 # master -> git.domain.tld
 ```
-
